@@ -888,6 +888,14 @@ class FileTypeParser {
 			};
 		}
 
+		if (this.checkString('<svg ')) {
+			return {
+				ext: 'svg',
+				mime: 'image/svg+xml',
+			};
+		}
+
+
 		if (this.check([0x37, 0x7A, 0xBC, 0xAF, 0x27, 0x1C])) {
 			return {
 				ext: '7z',
